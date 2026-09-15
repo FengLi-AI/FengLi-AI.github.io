@@ -11,8 +11,8 @@
   {
     "title": "萌生 · JotBloom",
     "type": "PRODUCT",
-    "image": "assets/previews/jotbloom.png",
-    "alt": "萌生完整灵感面板，置于桌面壁纸上展示左右边缘与底部形态",
+    "image": "assets/previews/jotbloom-1.0.4-dark-inspiration.png",
+    "alt": "萌生 1.0.4 原生灵感面板（演示内容），完整展示新版导航、输入区与渐变操作按钮",
     "description": "随时呼出、用完收起。整合灵感、剪贴板、提示词与 AI 对话，让记录和复用更顺手。",
     "url": "https://fengli-ai.github.io/JotBloom-Notch-Assistant/",
     "linkLabel": "打开产品官网",
