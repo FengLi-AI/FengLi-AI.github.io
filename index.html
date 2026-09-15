@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FengLi / 李烽立，AI 产品经理。关注 AI，也关注 AI 背后的人。">
+  <meta name="description" content="FengLi / 李烽立，AI 产品经理，关注 Agent、Harness、RAG 与人机协同。从需求、原型到产品落地。">
   <meta name="theme-color" content="#F5FBFF">
   <link rel="icon" href="data:,">
   <title>FengLi / 李烽立 — AI 产品经理</title>
@@ -532,12 +532,15 @@
       [data-parallax] { transform: none !important; }
     }
   </style>
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/vendor/marked.umd.js"></script>
+  <script defer src="assets/vendor/purify.min.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <a class="brand" href="#intro" aria-label="返回首页">FengLi / 李烽立</a>
-    <div class="header-meta"><i class="live-dot" aria-hidden="true"></i><span>AI Product Manager</span><span>Personal Site 4.0</span></div>
+    <div class="header-meta"><i class="live-dot" aria-hidden="true"></i><span>AI Product Manager</span><span>Personal Site 5.3</span></div>
   </header>
 
   <aside class="chapter-nav" aria-label="章节导航">
@@ -582,14 +585,14 @@
       <div class="scene-frame human-frame">
         <div class="human-word top" aria-hidden="true" data-parallax="-34">AI</div>
         <div class="human-word bottom" aria-hidden="true" data-parallax="28">HUMAN</div>
-        <div class="human-side" data-parallax="-20">
+        <div class="human-side human-left" data-parallax="-20">
           <span class="eyebrow">01 / THE QUESTION</span>
           <p class="body-copy">AI 能做什么，<br>只是问题的一半。</p>
         </div>
         <h2 id="human-title" class="eyebrow human-center-label">The human side<br>of intelligence</h2>
-        <div class="human-side" data-parallax="24">
+        <div class="human-side human-right" data-parallax="24">
           <span class="eyebrow">THE OTHER HALF</span>
-          <p class="body-copy">另一半是：<br>它为谁而做。</p>
+          <p class="body-copy"><span class="human-line">另一半是<span class="end-mark">：</span></span><span class="human-line">它为谁而做<span class="end-mark">。</span></span></p>
         </div>
       </div>
     </section>
@@ -597,10 +600,15 @@
     <section class="scene" id="about" aria-labelledby="about-title">
       <div class="scene-frame about-frame">
         <div class="about-index" aria-hidden="true" data-parallax="-30">02</div>
+        <div class="portrait-placement" data-parallax="18">
+          <img class="portrait-image" src="assets/portrait-fengli.png" width="300" height="500" alt="李烽立个人照片">
+        </div>
         <div class="about-copy">
           <span class="eyebrow">02 / ABOUT</span>
           <h2 id="about-title" data-parallax="18">FengLi.<br>李烽立。</h2>
-          <p class="body-copy">AI 产品经理。这是一个介绍自己，并集中展示个人内容与部分作品的地方。比起堆满标签，我更愿意先留下最重要的一句：永远真诚。</p>
+          <p class="eyebrow">AI 产品经理 / AGENT · HARNESS · PRODUCT</p>
+          <p class="body-copy" data-profile="intro" data-parallax="-10">我是李烽立，一名关注 Agent 与 Harness 的 AI 产品经理。从需求分析、产品规划到原型与 MVP，推动 AI 在企业知识服务、内容生产和桌面效率工具中落地。重视 RAG、评测与人机协同，让执行可追溯、结果可判断，也让产品真正融入人的工作。</p>
+          <nav class="profile-links" aria-label="了解更多"><a href="assets/resume/李烽立简历-AI产品经理-V1.2.pdf" target="_blank" rel="noopener noreferrer">我的简历 ↗</a><a href="https://github.com/FengLi-AI" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.xiaohongshu.com/user/profile/69b6dd97000000003303a64d" target="_blank" rel="noopener noreferrer">小红书 ↗</a><a href="https://mp.weixin.qq.com/s/YZA2Fc5PAcy_8diKF-hQNA" target="_blank" rel="noopener noreferrer">公众号 ↗</a></nav>
         </div>
       </div>
     </section>
@@ -608,15 +616,22 @@
     <section class="scene" id="experience" aria-labelledby="experience-title">
       <div class="scene-frame experience-frame">
         <div class="experience-copy">
-          <span class="eyebrow">03 / PAST EXPERIENCE</span>
-          <h2 id="experience-title" data-parallax="14">A Short<br>History.</h2>
-          <div class="experience-list">
-            <div class="experience-row"><small>01</small><strong>过往经历简介</strong><small>待补充</small></div>
-            <div class="experience-row"><small>02</small><strong>擅长领域与能力</strong><small>待补充</small></div>
-            <div class="experience-row"><small>03</small><strong>个人观点与职业主张</strong><small>持续整理</small></div>
+          <div class="experience-overview">
+            <span class="eyebrow">03 / PAST EXPERIENCE</span>
+            <h2 id="experience-title" data-parallax="14">A Short<br>History.</h2>
+            <div class="experience-list">
+              <button class="experience-row" data-file="content/experience.md" aria-expanded="false" aria-controls="experience-reader"><small>01</small><strong>过往经历简介</strong><span class="row-action" aria-hidden="true">+</span></button>
+              <button class="experience-row" data-file="content/abilities.md" aria-expanded="false" aria-controls="experience-reader"><small>02</small><strong>擅长领域与能力</strong><span class="row-action" aria-hidden="true">+</span></button>
+              <button class="experience-row" data-file="content/views.md" aria-expanded="false" aria-controls="experience-reader"><small>03</small><strong>个人观点与职业主张</strong><span class="row-action" aria-hidden="true">+</span></button>
+            </div>
           </div>
+          <article class="reader" id="experience-reader" aria-labelledby="reader-title" hidden>
+            <div class="reader-surface" aria-hidden="true"></div>
+            <header class="reader-header"><h3 class="reader-title" id="reader-title"></h3><button class="reader-close" type="button" aria-label="收起内容，返回标题列表">收起 ↗</button></header>
+            <div class="reader-content" tabindex="0" role="region" aria-label="板块正文，可独立上下滚动阅读" aria-live="polite"></div>
+          </article>
         </div>
-        <p class="body-copy experience-note quiet">这里不会被做成一份冗长简历。只保留经过确认、能被真实经历支撑的内容。</p>
+        <p class="body-copy experience-note quiet">从业务问题走向产品落地，<br>用评测验证，用反馈迭代。<br>让 AI 执行，让人保留判断。</p>
       </div>
     </section>
 
@@ -624,10 +639,10 @@
       <div class="scene-frame work-frame">
         <div class="work-copy">
           <span class="eyebrow">04 / SELECTED WORK</span>
-          <h2 id="work-title" data-parallax="16">Work In<br>Progress.</h2>
-          <div class="work-grid">
-            <article class="work-card"><h3>Personal<br>Content</h3><footer><span>内容归档</span><span>待补充</span></footer></article>
-            <article class="work-card"><h3>Selected<br>Projects</h3><footer><span>代表作品</span><span>待补充</span></footer></article>
+          <h2 id="work-title" data-parallax="16">Selected<br>Work.</h2>
+          <div class="work-carousel" role="region" aria-label="作品、文章与 Skills">
+            <div class="work-toolbar"><span class="eyebrow">PRODUCTS / WRITING / SKILLS</span><div class="carousel-controls"><button data-carousel="prev" aria-label="向左查看">←</button><button data-carousel="pause" aria-label="暂停自动滚动" aria-pressed="false">Ⅱ</button><button data-carousel="next" aria-label="向右查看">→</button></div></div>
+            <div class="work-viewport"><div class="work-track"><p>正在展开作品…</p></div></div>
           </div>
         </div>
       </div>
@@ -637,8 +652,16 @@
       <div class="scene-frame contact-frame">
         <div class="contact-inner">
           <span class="eyebrow">05 / THE NEXT CONVERSATION</span>
-          <h2 class="contact-title" id="contact-title" data-parallax="12">AI +<br>People.</h2>
-          <p class="body-copy">联系方式将在后续版本补充。<br><span class="quiet">当前不虚构邮箱，也不放无效入口。</span></p>
+          <h2 class="contact-title" id="contact-title" data-parallax="6">AI +<br>People.</h2>
+          <div class="contact-details">
+            <p class="contact-name" data-profile="name">李烽立</p>
+            <span class="contact-rule" aria-hidden="true"></span>
+            <div class="contact-line"><span class="contact-label">TEL</span>
+            <a data-profile="phone" href="tel:18580676433" aria-label="拨打李烽立的电话">185 8067 6433</a></div>
+            <div class="contact-line"><span class="contact-label">MAIL</span>
+            <a data-profile="email" href="mailto:qq204407676@gmail.com">qq204407676@gmail.com</a></div>
+            <div class="contact-line"><span class="contact-label">WECHAT</span><span class="contact-wechat" data-profile="wechat">feNgL1999_</span></div>
+          </div>
         </div>
         <footer class="contact-foot"><span>FengLi / 李烽立</span><span>AI Product Manager</span><span>Always sincere / 2026</span></footer>
       </div>
@@ -781,7 +804,6 @@
     const scenes = [...document.querySelectorAll(".scene")];
     const navLinks = [...document.querySelectorAll(".chapter-nav a")];
     const progressFill = document.querySelector(".progress-fill");
-    const mobileProgress = matchMedia("(max-width: 900px), (hover: none) and (pointer: coarse)");
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     const desktopStates = [
       { x: 70, y: 52, s: 1,    g: 1, bg: "#F5FBFF", fg: "#171717" },
@@ -789,15 +811,15 @@
       { x: 7,  y: 55, s: 1.30, g: 1, bg: "#F5FBFF", fg: "#171717" },
       { x: 82, y: 53, s: .66,  g: 1, bg: "#F5FBFF", fg: "#171717" },
       { x: 18, y: 48, s: .90,  g: 1, bg: "#F5FBFF", fg: "#171717" },
-      { x: 50, y: 52, s: 1.34, g: 0, bg: "#121212", fg: "#f4f1ea" },
+      { x: 50, y: 50, s: 1.34, g: 0, bg: "#121212", fg: "#f4f1ea" },
     ];
     const mobileStates = [
-      { x: 50, y: 59, s: .88,  g: 1, bg: "#F5FBFF", fg: "#171717" },
+      { x: 50, y: 60, s: .88,  g: 1, bg: "#F5FBFF", fg: "#171717" },
       { x: 50, y: 47, s: .42,  g: 0, bg: "#181817", fg: "#f2efe8" },
       { x: -8, y: 38, s: .96, g: 1, bg: "#F5FBFF", fg: "#171717" },
       { x: 82, y: 30, s: .55,  g: 1, bg: "#F5FBFF", fg: "#171717" },
       { x: 18, y: 30, s: .66,  g: 1, bg: "#F5FBFF", fg: "#171717" },
-      { x: 50, y: 55, s: 1.05, g: 0, bg: "#121212", fg: "#f4f1ea" },
+      { x: 50, y: 49, s: 1.08, g: 0, bg: "#121212", fg: "#f4f1ea" },
     ];
 
     let metrics = [];
@@ -820,6 +842,18 @@
     };
     const cssColor = (channels) => `rgb(${channels.map((channel) => Math.round(channel)).join(" ")})`;
 
+    function readableForeground(bg) {
+      const linear = value => { const c = value / 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; };
+      const luminance = rgb => rgb.reduce((sum, value, i) => sum + linear(value) * [.2126, .7152, .0722][i], 0);
+      const light = [255, 255, 255], dark = [23, 23, 23];
+      const level = luminance(bg), darkLevel = luminance(dark);
+      const darkContrast = (level + .05) / (darkLevel + .05);
+      const lightContrast = 1.05 / (level + .05);
+      if (darkContrast >= 4.5) return dark;
+      if (lightContrast >= 4.5) return light;
+      return [0, 0, 0];
+    }
+
     function renderVisual() {
       if (!currentVisual) return;
       orbStage.style.setProperty("--orb-x", currentVisual.x);
@@ -827,7 +861,7 @@
       orbStage.style.setProperty("--orb-scale", currentVisual.s);
       const background = cssColor(currentVisual.bg);
       document.documentElement.style.setProperty("--page-bg", background);
-      document.documentElement.style.setProperty("--page-fg", cssColor(currentVisual.fg));
+      document.documentElement.style.setProperty("--page-fg", cssColor(readableForeground(currentVisual.bg)));
       document.documentElement.style.setProperty("--orb-theme", currentVisual.g);
       if (window.__orbUniforms) window.__orbUniforms[28] = currentVisual.g;
       metaTheme.setAttribute("content", background);
@@ -905,16 +939,19 @@
         if (pageY >= metrics[index].top - innerHeight * .3) active = index;
       }
 
+      document.body.classList.toggle("is-contact", active === 5);
       const currentMetric = metrics[active];
       const local = clamp((pageY - currentMetric.top) / currentMetric.range);
       const reduced = motionPreference.matches;
-      const blendProgress = clamp((local - .19) / .62);
+      const blendProgress = clamp((local - .42) / .51);
       const blend = reduced ? (local > .5 ? 1 : 0) : smoother(blendProgress);
-      const states = matchMedia("(max-width: 720px)").matches ? mobileStates : desktopStates;
+      const states = matchMedia("(max-width: 760px)").matches ? mobileStates : desktopStates;
       const from = states[active];
       const to = states[Math.min(active + 1, states.length - 1)];
 
-      updateVisual({
+      const reading = window.siteReading && active === 3;
+      document.body.classList.toggle("reading-experience", Boolean(reading));
+      updateVisual(reading ? { ...states[3], bg: color(states[3].bg), fg: color(states[3].fg) } : {
         x: mix(from.x, to.x, blend) + pointerX,
         y: mix(from.y, to.y, blend) + pointerY,
         s: mix(from.s, to.s, blend),
@@ -927,7 +964,12 @@
         const frame = scene.querySelector(".scene-frame");
         const sceneMetric = metrics[index];
         const sceneLocal = clamp((pageY - sceneMetric.top) / sceneMetric.range);
-        const fade = reduced ? 1 : 1 - smooth(clamp((sceneLocal - .55) / .45)) * .8;
+        const portrait = scene.querySelector(".portrait-image");
+        if (portrait) {
+          const entrance = clamp((pageY - sceneMetric.top + innerHeight * .48) / (innerHeight * .48));
+          portrait.style.opacity = reduced ? 1 : smoother(entrance);
+        }
+        const fade = 1; // Keep content legible throughout color transitions and at the end of the page.
         frame.style.setProperty("--scene-opacity", fade);
         scene.querySelectorAll("[data-parallax]").forEach((element) => {
           if (reduced) {
@@ -945,7 +987,7 @@
       });
       const maximum = Math.max(1, document.documentElement.scrollHeight - innerHeight);
       const progress = clamp(pageY / maximum);
-      progressFill.style.transform = mobileProgress.matches ? `scaleX(${progress})` : `scaleY(${progress})`;
+      progressFill.style.transform = `scaleX(${progress})`;
     }
 
     function requestScrollSync() {
@@ -974,9 +1016,11 @@
 
     window.addEventListener("scroll", requestScrollSync, { passive: true });
     window.addEventListener("resize", measure, { passive: true });
+    window.addEventListener("site:layout", measure);
     window.addEventListener("load", measure, { once: true });
     motionPreference.addEventListener("change", measure);
     measure();
   </script>
+  <script type="module" src="assets/site.js"></script>
 </body>
 </html>

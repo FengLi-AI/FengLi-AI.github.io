@@ -1,0 +1,66 @@
+[
+  {
+    "title": "InTeam",
+    "type": "PRODUCT",
+    "image": "assets/previews/inteam.png",
+    "alt": "InTeam 实际工作台截图",
+    "description": "面向企业入职与展厅培训，把知识问答、上手地图与人工确认的行动计划连在一起。",
+    "url": "https://github.com/FengLi-AI/InTeam",
+    "linkLabel": "查看项目"
+  },
+  {
+    "title": "萌生 · JotBloom",
+    "type": "PRODUCT",
+    "image": "assets/previews/jotbloom.png",
+    "alt": "萌生完整灵感面板，置于桌面壁纸上展示左右边缘与底部形态",
+    "description": "随时呼出、用完收起。整合灵感、剪贴板、提示词与 AI 对话，让记录和复用更顺手。",
+    "url": "https://fengli-ai.github.io/JotBloom-Notch-Assistant/",
+    "linkLabel": "打开产品官网",
+    "desktopBackground": "assets/previews/jotbloom-desktop-wallpaper.png"
+  },
+  {
+    "title": "短剧引擎",
+    "type": "PRODUCT",
+    "image": "assets/previews/drama.png",
+    "alt": "短剧制作流程概念封面，非产品截图",
+    "description": "串联剧本、角色与分镜生成，以人工确认、历史版本和费用预估组织 AI 内容生产。",
+    "url": "https://ocn6aanx5tv1.feishu.cn/wiki/FIPAw4EqtirHj9k89JbctdQcnKb",
+    "linkLabel": "阅读项目经历"
+  },
+  {
+    "title": "Create Article Visuals",
+    "type": "SKILL",
+    "image": "assets/previews/visuals.png",
+    "alt": "文字转化为多幅文章视觉的概念封面",
+    "description": "从文章内容出发，策划、生成、检查并导出头图、正文配图与知识卡片。",
+    "url": "https://github.com/FengLi-AI/create-article-visuals",
+    "linkLabel": "查看 Skill"
+  },
+  {
+    "title": "Analyze Internet Product",
+    "type": "SKILL",
+    "image": "assets/previews/analyze.png",
+    "alt": "从页面拆解用户旅程与产品架构的概念封面",
+    "description": "基于页面证据，拆解用户旅程、产品机制与架构，整理为可离线查看的分析报告。",
+    "url": "https://github.com/FengLi-AI/analyze-internet-product",
+    "linkLabel": "查看 Skill"
+  },
+  {
+    "title": "我的公众号文章",
+    "type": "ARTICLE",
+    "image": "assets/previews/article.svg",
+    "alt": "公众号文章编辑封面，非原文头图",
+    "description": "把实践中的问题、方法与思考写下来。关注 AI 产品，也关注技术背后的人。",
+    "url": "https://mp.weixin.qq.com/s/YZA2Fc5PAcy_8diKF-hQNA",
+    "linkLabel": "阅读全文"
+  },
+  {
+    "title": "小红书 · FengLi",
+    "type": "SOCIAL",
+    "image": "assets/previews/field-notes.png",
+    "alt": "个人创作与产品笔记概念封面",
+    "description": "分享 AI 工具、产品实践与设计观察，也交流使用反馈和新的想法。",
+    "url": "https://www.xiaohongshu.com/user/profile/69b6dd97000000003303a64d",
+    "linkLabel": "进入小红书主页"
+  }
+]

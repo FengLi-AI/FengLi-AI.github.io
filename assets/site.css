@@ -1,0 +1,248 @@
+/* Personal site 5.0: content, reading, and considered motion. */
+:root { --accent: #5a75fb; --heavy: "Arial Black", "Helvetica Neue", Arial, sans-serif; }
+.hero-title .role-line { font-family: var(--heavy); font-weight: 900; font-size: .92em; line-height: .93; letter-spacing: -.075em; }
+.hero-title .manifesto-line { font-weight: 500; font-size: .32em; letter-spacing: -.045em; }
+.about-copy { gap: 24px; }
+.about-copy .body-copy { font-size: clamp(16px, 1.27vw, 20px); line-height: 1.85; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 12px 22px; font-size: 14px; pointer-events: auto; }
+.profile-links a { border-bottom: 1px solid var(--hairline); padding: 6px 0; }
+.profile-links a:hover { color: var(--accent); }
+main .body-copy, .contact-details { pointer-events: auto; user-select: text; }
+.experience-copy { position: relative; width: 100%; }
+.experience-overview h2 { transition: translate .55s cubic-bezier(.22,1,.36,1), opacity .4s; }
+.experience-overview .eyebrow { display: block; margin-bottom: 10px; transition: opacity .2s; }
+.experience-list { pointer-events: auto; }
+button.experience-row { width: 100%; border: 0; border-bottom: 1px solid var(--hairline); text-align: left; background: none; color: inherit; cursor: pointer; transition: background .2s; }
+button.experience-row:hover { background: #5a75fb0a; }
+button.experience-row strong { font-size: clamp(18px, 1.9vw, 29px); }
+.row-action { font-family: monospace; font-size: 22px; transition: rotate .3s; }
+button.experience-row:hover .row-action { rotate: 90deg; }
+.reader[hidden] { display: none; }
+.reader { position: relative; pointer-events: auto; min-height: calc(100svh - 155px); padding: 6px 0 48px; }
+.reader-surface { position: absolute; inset: 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); z-index: -1; background: #f4fbff; }
+.reader-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0 24px; }
+.reader-title { margin: 0; font-size: clamp(20px, 2.15vw, 30px); font-weight: 500; line-height: 1.4; transform-origin: left center; }
+.reader-close { flex-shrink: 0; border: 1px solid var(--hairline); background: none; padding: 10px 14px; cursor: pointer; font-size: 12px; border-radius: 999px; }
+.reader-close:hover { background: #171717; color: #f4fbff; }
+.reader-content { font-size: 16px; line-height: 1.85; color: #37383d; overflow-wrap: anywhere; }
+.reader-content h1, .reader-content h2, .reader-content h3 { font-family: var(--display); font-size: 22px; line-height: 1.5; font-weight: 600; letter-spacing: -.02em; text-transform: none; margin: 30px 0 12px; }
+.reader-content h1 { font-size: 28px; }
+.reader-content h3 { font-size: 18px; }
+.reader-content > :first-child { margin-top: 8px; }
+.reader-content p { margin: 12px 0 22px; }
+.reader-content ul, .reader-content ol { padding-left: 1.4em; }
+.reader-content li { margin: 9px 0; }
+.reader-content a { color: #3e58cf; text-decoration: underline; text-underline-offset: 4px; }
+.reader-content img { display: block; max-width: 100%; height: auto; margin: 20px 0; }
+.reader-content blockquote { border-left: 2px solid var(--accent); margin: 24px 0; padding: 4px 20px; color: #555; }
+.reader-content .table-wrap { overflow-x: auto; margin: 24px 0; }
+.reader-content table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.reader-content th, .reader-content td { border: 1px solid #d1d7dc; padding: 10px 12px; text-align: left; }
+.reader-content pre { background: #eaf0f6; padding: 20px; overflow-x: auto; border-radius: 3px; }
+.reader-content code { font-size: .88em; background: #eaf0f6; padding: 2px 5px; }
+.reader-content pre code { padding: 0; }
+.reader-content button { cursor: pointer; padding: 10px 18px; border: 1px solid #aaa; background: transparent; }
+#experience.is-reading { min-height: 190svh; }
+#experience.is-reading .experience-frame { height: auto; min-height: 100svh; position: relative; overflow: clip; align-items: start; }
+#experience.is-reading .experience-overview { position: absolute; top: 0; width: 100%; pointer-events: none; }
+#experience.is-reading .experience-overview h2 { translate: -120% 0; opacity: 0; }
+#experience.is-reading .experience-overview .eyebrow, #experience.is-reading .experience-list { opacity: 0; pointer-events: none; }
+#experience.is-reading .experience-note { position: sticky; top: 65svh; align-self: start; margin-top: 55svh; }
+body.reading-experience #orb-stage { opacity: .22; transition: opacity .4s; }
+#orb-stage { transition: opacity .4s; }
+.work-copy { min-width: 0; width: 100%; }
+.work-copy h2 { font-size: clamp(50px, 7.1vw, 105px); }
+.work-carousel { margin-top: 26px; pointer-events: auto; }
+.work-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 2px; }
+.work-toolbar .eyebrow { font-size: 9px; opacity: .75; }
+.carousel-controls { display: flex; gap: 7px; }
+.carousel-controls button { width: 32px; height: 32px; border: 1px solid var(--hairline); border-radius: 50%; background: transparent; cursor: pointer; display: grid; place-items: center; font-size: 15px; }
+.carousel-controls button:hover { background: var(--page-fg); color: var(--page-bg); }
+.work-viewport { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; padding: 12px 4px 16px; scroll-behavior: auto; overscroll-behavior-x: contain; }
+.work-viewport::-webkit-scrollbar { display: none; }
+.work-track { display: flex; gap: 14px; width: max-content; }
+.work-tile { flex: 0 0 var(--card-width, 270px); width: var(--card-width, 270px); border: 1px solid var(--hairline); background: var(--page-bg); transition: transform .22s ease, border-color .22s; transform-origin: center; display: flex; flex-direction: column; }
+.work-tile:hover, .work-tile:focus-visible { transform: scale(1.025); border-color: var(--accent); }
+.work-tile img { width: 100%; aspect-ratio: 2 / 1; display: block; object-fit: cover; object-position: top; border-bottom: 1px solid var(--hairline); }
+.tile-copy { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.tile-type { font-size: 9px; letter-spacing: .12em; color: var(--accent); }
+.work-tile h3 { font-size: 19px; font-weight: 600; letter-spacing: -.035em; line-height: 1.15; margin: 9px 0; }
+.work-tile p { font-size: 12px; line-height: 1.6; margin: 0; flex: 1; }
+.tile-link { display: flex; justify-content: space-between; font-size: 10px; margin-top: 16px; padding-top: 10px; border-top: 1px solid var(--hairline); }
+.contact-inner { gap: 28px; position: relative; z-index: 2; }
+.contact-title { font-size: clamp(62px, 8vw, 115px); }
+.contact-details { display: grid; justify-items: center; gap: 12px; padding: 22px 28px; border: 1px solid #ffffff25; border-radius: 3px; background: #121212df; backdrop-filter: blur(12px); max-width: calc(100vw - 40px); }
+.contact-name { margin: 0 0 3px; font-size: 23px; font-weight: 500; }
+.contact-details a { font-size: clamp(17px, 2vw, 24px); letter-spacing: .015em; overflow-wrap: anywhere; }
+.contact-details a:hover { text-decoration: underline; text-underline-offset: 6px; }
+.contact-foot span:first-child { text-transform: none; }
+@media (max-width: 1100px) and (min-width: 761px) {
+  .experience-frame { gap: 5vw; }
+  .work-frame { gap: 5vw; grid-template-columns: .65fr 1.35fr; }
+}
+@media (max-width: 760px) {
+  .hero-title .role-line { font-size: .86em; letter-spacing: -.075em; }
+  .hero-title .manifesto-line { margin-top: 20px; font-size: clamp(18px, 5.7vw, 26px); }
+  .hero-thesis { margin-left: 0; font-size: 16px; }
+  .about-copy { margin-top: 0; gap: 22px; }
+  .about-copy .body-copy { font-size: 16px; line-height: 1.75; margin-left: 0; }
+  .about-copy h2 { font-size: 56px; }
+  .about-index { display: none; }
+  .experience-row { grid-template-columns: 25px 1fr 25px; padding: 18px 0; }
+  .experience-row strong { font-size: 19px; }
+  .experience-row .row-action { grid-column: 3 !important; font-size: 21px; }
+  .reader-header { align-items: start; gap: 12px; }
+  .reader-title { font-size: 23px; }
+  .reader-content { font-size: 16px; }
+  .reader-close { padding: 9px 12px; }
+  #experience.is-reading { min-height: 100svh; }
+  #experience.is-reading .experience-frame { padding-top: 86px; padding-bottom: 105px; }
+  .work-copy { margin-top: 0; }
+  .work-copy h2 { font-size: clamp(44px, 13.5vw, 65px); }
+  .work-carousel { margin-top: 20px; }
+  .work-toolbar .eyebrow { font-size: 8px; }
+  .work-tile h3 { font-size: 20px; }
+  .work-tile p { font-size: 13px; }
+  .work-viewport { scroll-snap-type: x mandatory; }
+  .work-tile { scroll-snap-align: start; }
+  .work-tile:hover { transform: none; }
+  .contact-details { padding: 20px; }
+  .contact-title { font-size: 66px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-overview h2, .work-tile { transition: none; }
+}
+/* Keep previews at their intended ratio, including assets with intrinsic dimensions. */
+.work-tile img { height: calc((var(--card-width, 270px) - 2px) / 2); }
+.reader { z-index: 0; }
+.contact-details { background: none; border: 0; backdrop-filter: none; padding: 6px 0; }
+@media (min-width: 761px) { .work-copy { padding-right: 50px; } }
+
+/* 5.1 — a softer weight, longer resting poses, and layouts specific to each screen. */
+@property --page-fg { syntax: '<color>'; inherits: true; initial-value: #171717; }
+html { transition: --page-fg .28s ease-in-out; }
+:root { --headline: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+.hero-title .role-line, .about-copy h2, .experience-overview h2, .work-copy h2, .contact-title, .human-word {
+  font-family: var(--headline); font-weight: 700; letter-spacing: -.055em;
+}
+.hero-title .role-line { font-size: .94em; line-height: .91; }
+.about-copy h2, .experience-overview h2, .work-copy h2 { line-height: .92; }
+.human-frame { padding-right: max(175px, 11vw); }
+.human-side { max-width: 330px; }
+.human-side .body-copy { font-size: clamp(22px, 1.85vw, 30px); line-height: 1.55; margin-top: 12px; }
+.human-frame .human-right { grid-column: 3; justify-self: end; text-align: right; }
+.human-frame .human-left { grid-column: 1; }
+.human-center-label { grid-column: 2; }
+.contact-inner { position: absolute; left: 18px; right: 18px; top: 50svh; transform: translateY(-50%); max-width: none; gap: 26px; }
+.contact-title { font-size: clamp(70px, 7.3vw, 105px); line-height: .9; }
+.contact-details { gap: 10px; max-width: calc(100vw - 40px); }
+.contact-name { font-family: "PingFang SC", sans-serif; font-size: 22px; font-weight: 400; letter-spacing: .22em; padding-left: .22em; margin: 0; }
+.contact-rule { display: block; width: 36px; height: 1px; background: currentColor; opacity: .45; margin: 5px 0 10px; }
+.contact-line { display: grid; grid-template-columns: 35px 1fr; align-items: baseline; gap: 14px; width: 100%; text-align: left; }
+.contact-label { font-family: "SFMono-Regular", Consolas, monospace; font-size: 9px; letter-spacing: .14em; opacity: .6; }
+.contact-details .contact-line a { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 400; font-size: 17px; letter-spacing: .06em; line-height: 1.5; }
+.contact-details .contact-line:last-child a { font-size: 14px; letter-spacing: .015em; }
+@media (max-width: 760px) {
+  .hero-main { position: absolute; left: 18px; right: 18px; top: 23svh; width: auto; }
+  .hero-title .role-line { font-size: .86em; line-height: .93; }
+  .hero-thesis { margin-top: clamp(60px, 14svh, 135px); max-width: 290px; font-size: 17px; line-height: 1.7; }
+  .hero-sincerity { bottom: 145px; }
+  .human-frame { display: block; padding-right: 18px; }
+  .human-left { position: absolute; left: 22px; top: 57svh; width: 185px; }
+  .human-frame .human-right { position: absolute; right: 22px; top: 29svh; width: 185px; text-align: right; }
+  .human-side .eyebrow { font-size: 9px; }
+  .human-side .body-copy { font-size: 20px; line-height: 1.6; margin-top: 9px; }
+  .human-center-label { bottom: 112px; right: 22px; font-size: 9px; }
+  .human-word.bottom { font-size: 25vw; right: 18px; bottom: 118px; letter-spacing: -.065em; }
+  .human-word.top { font-size: 39vw; }
+  .about-frame, .experience-frame, .work-frame { align-content: start; }
+  .about-copy { margin-top: 9svh; gap: 28px; }
+  .experience-copy { margin-top: 8svh; }
+  .experience-list { margin-top: 7svh; }
+  #experience.is-reading .experience-copy { margin-top: 0; }
+  .work-copy { margin-top: 6svh; }
+  .work-copy h2 { font-size: clamp(42px, 12.8vw, 62px); }
+  .work-carousel { margin-top: 6svh; }
+  .work-viewport { scroll-snap-type: none; }
+  .contact-inner { top: 49svh; gap: 20px; }
+  .contact-title { font-size: clamp(46px, 14vw, 62px); }
+  .contact-details { gap: 8px; }
+  .contact-name { font-size: 20px; }
+  .contact-rule { margin: 3px 0 5px; }
+  .contact-line { grid-template-columns: 30px 1fr; gap: 12px; }
+  .contact-details .contact-line a { font-size: 16px; }
+  .contact-details .contact-line:last-child a { font-size: 13px; }
+}
+@media (max-width: 760px) and (max-height: 740px) {
+  .hero-main { top: 21svh; }
+  .hero-thesis { margin-top: 8svh; }
+  .about-copy, .experience-copy, .work-copy { margin-top: 2svh; }
+  .work-carousel { margin-top: 3svh; }
+  .contact-inner { gap: 15px; }
+  .contact-title { font-size: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { html { transition: none; } }
+
+.work-copy > .eyebrow { display: block; margin-bottom: 14px; }
+
+/* 5.2 — restrained parallax, optical alignment, and a compact mobile cover. */
+.progress-track { top: 0; right: 0; bottom: auto; left: 0; width: 100%; height: 2px; z-index: 70; }
+.progress-fill { transform-origin: left center; }
+.human-line { display: block; }
+.end-mark { display: inline-block; width: 0; overflow: visible; }
+@media (min-width: 761px) {
+  .human-frame { padding-right: max(105px, 6vw); }
+  .human-right .eyebrow { display: block; }
+}
+@media (max-width: 760px) {
+  .hero-main { top: 21svh; }
+  .hero-title .manifesto-line { margin-top: 20px; font-size: clamp(19px, 5.4vw, 24px); }
+  .hero-thesis { margin: 22px 0 0; font-size: 16px; max-width: none; }
+  .human-right { right: 32px; }
+}
+
+/* 5.2 content refresh — portrait, resume and an independent reading column. */
+.portrait-placement { position: absolute; left: 25%; top: 24svh; width: min(17vw, 30svh); }
+.portrait-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 5; object-fit: cover; border: 1px solid #bfcbd64d; opacity: 0; }
+.about-copy > .eyebrow { line-height: 1.55; }
+html.reading-locked { overflow: hidden; }
+#experience.is-reading { min-height: 190svh; }
+#experience.is-reading .experience-frame { position: sticky; top: 0; height: 100svh; min-height: 0; overflow: hidden; align-items: start; }
+#experience.is-reading .experience-copy { height: 100%; min-height: 0; }
+.reader { display: flex; flex-direction: column; height: 100%; min-height: 0; padding: 0; }
+.reader-header { flex: 0 0 auto; padding: 20px 0; }
+.reader-content { flex: 1 1 0; min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; touch-action: pan-y; padding: 0 20px 36px 0; scrollbar-width: thin; scrollbar-color: #96a9ba #e9f1f7; scrollbar-gutter: stable; }
+.reader-content:focus-visible { outline: 1px solid var(--accent); outline-offset: -1px; }
+#experience.is-reading .experience-note { position: static; top: auto; align-self: end; margin: 0 40px 70px 0; }
+.contact-line { grid-template-columns: 52px 1fr; gap: 16px; }
+.contact-details .contact-line a[data-profile="email"], .contact-wechat { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.5; letter-spacing: .015em; }
+.contact-wechat { user-select: all; }
+.work-tile img { object-position: center; }
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
+  .about-frame { display: block; padding-top: 100px; }
+  .about-copy { margin-top: 0; gap: 24px; max-width: none; }
+  .about-copy h2 { font-size: clamp(40px, 10.7vw, 66px); width: 66%; margin: 22px 0 30px; }
+  .about-copy .body-copy { max-width: 100%; margin-left: 0; font-size: 16px; line-height: 1.8; }
+  .about-copy > p.eyebrow { font-size: 9px; letter-spacing: .04em; }
+  .portrait-placement { left: auto; right: 22px; top: 145px; width: min(25vw, 118px); }
+  .profile-links { font-size: 13px; gap: 12px 20px; }
+  #experience.is-reading { min-height: 170svh; }
+  #experience.is-reading .experience-frame { padding-top: 86px; padding-bottom: 100px; }
+  .reader-content { padding-right: 12px; padding-bottom: 30px; }
+  .contact-line { grid-template-columns: 45px 1fr; gap: 12px; }
+  .contact-details .contact-line a[data-profile="email"], .contact-wechat { font-size: 13px; }
+}
+@media (max-width: 760px) and (max-height: 740px) {
+  .about-frame { padding-top: 82px; }
+  .about-copy { gap: 16px; }
+  .about-copy h2 { margin: 16px 0 22px; }
+  .about-copy .body-copy { font-size: 14px; line-height: 1.7; }
+  .portrait-placement { top: 119px; width: min(23vw, 95px); }
+  .profile-links { gap: 8px 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .portrait-image { opacity: 1; } }
+
+/* 5.3 — show the full edge-mounted JotBloom panel within its desktop context. */
+.work-media.desktop-preview { position: relative; width: 100%; height: calc((var(--card-width, 270px) - 2px) / 2); flex: 0 0 auto; overflow: hidden; border-bottom: 1px solid var(--hairline); background: #c3d5e1; }
+.work-tile .work-desktop-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.work-tile .work-product-shot { position: absolute; top: 0; left: 8%; width: 84%; height: auto; max-height: 84%; aspect-ratio: auto; object-fit: contain; border: 0; border-radius: 0 0 10px 10px; box-shadow: 0 7px 15px #12233845; }
