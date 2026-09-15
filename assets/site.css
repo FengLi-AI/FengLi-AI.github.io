@@ -246,3 +246,15 @@ html.reading-locked { overflow: hidden; }
 .work-media.desktop-preview { position: relative; width: 100%; height: calc((var(--card-width, 270px) - 2px) / 2); flex: 0 0 auto; overflow: hidden; border-bottom: 1px solid var(--hairline); background: #c3d5e1; }
 .work-tile .work-desktop-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
 .work-tile .work-product-shot { position: absolute; top: 0; left: 8%; width: 84%; height: auto; max-height: 84%; aspect-ratio: auto; object-fit: contain; border: 0; border-radius: 0 0 10px 10px; box-shadow: 0 7px 15px #12233845; }
+
+/* Body paragraphs: aligned edges with slightly tighter typesetting. */
+.about-copy .body-copy,
+.reader-content p,
+.reader-content li,
+.work-tile .tile-copy > p {
+  text-align: justify;
+  text-align-last: start;
+  text-justify: inter-ideograph;
+  letter-spacing: -.02em;
+  word-spacing: -.025em;
+}
