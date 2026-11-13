@@ -11,9 +11,9 @@
   {
     "title": "萌生 · JotBloom",
     "type": "PRODUCT",
-    "image": "assets/previews/jotbloom-1.0.4-dark-inspiration.png",
-    "alt": "萌生 1.0.4 原生灵感面板（演示内容），完整展示新版导航、输入区与渐变操作按钮",
-    "description": "随时呼出、用完收起。整合灵感、剪贴板、提示词与 AI 对话，让记录和复用更顺手。",
+    "image": "assets/previews/jotbloom-1.1.0/dark-assistant.png",
+    "alt": "萌生 1.1.0 原生助手界面（演示数据），展示助手对话与任务入口",
+    "description": "住在 Mac 屏幕顶部的免费开源个人助手：理解目标、确认计划，派给本机 Codex 并监督纠偏，重要问题交给你决定；也能记录灵感、回看剪贴板和复用提示词。",
     "url": "https://fengli-ai.github.io/JotBloom-Notch-Assistant/",
     "linkLabel": "打开产品官网",
     "desktopBackground": "assets/previews/jotbloom-desktop-wallpaper.png"
